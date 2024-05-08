@@ -1,11 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>troll</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body::-webkit-scrollbar {
+            width: 0.1em;
+        }
+
+        @keyframes spin-fast {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .animate-spin-fast {
+            animation: spin-fast 0.5s linear infinite;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <div class="flex flex-col justify-center items-center min-h-screen" style="background-color: rgb(22, 32, 50);">
+        <h1 class="text-slate-700 mb-4 text-2xl font-semibold" style="color: rgb(203, 213, 225);">hii semuanyah...</h1>
+        <img class="rounded-full w-2/12 hover:animate-spin-fast transition-300" src="aku.png" alt="gambar troll">
+    </div>
 </body>
+
 </html>
